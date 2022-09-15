@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ECECEC;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 100px auto 80px; /*divide a pagina */
+  }
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}   
+
+.logo_header{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+} 
+
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+.card{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 1px 30px #ccc;
+    padding: 30px;
+}
+
+.card-group{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0px;
+    gap: 2px;
+  }
+
+.card-group-senha{
+    position: relative;
+}
+
+#img_cadeado_aberto{
+    position: absolute;
+    left: 215px;
+    bottom: 4px;
+  }
+
+#img_cadeado_fechado{
+    position: absolute;
+    left: 215px;
+    bottom: 4px;
+    display: none;
+  }
+
+.card-group-img{
+    display: flex;
+    justify-content: center;
+}
+
+.div_botao{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    background-color: #ECECEC;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    min-width: max(15vw, 250px);
+    min-height: 4vh;
+}
+
+.botao{
+    background-color:  rgb(17, 184, 128);;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    padding: 8px 20px;
+    margin-top: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.botao:hover{
+    transform: scale(1.2);
+    background-color:  rgb(6, 144, 98);;
+}
+
+
+@media  (max-width: 650px) {
+
+    .nav-list{
+        width: 230px;
+    }
+
+    .group_elements{
+        flex-direction: column;
+    }
+
+    .form{
+        padding-top: 25px;
+    }
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

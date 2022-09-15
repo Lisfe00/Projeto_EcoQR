@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "axios": "^0.27",
+    "laravel-mix": "^6.0.49",
+    "laravel-vite-plugin": "^0.6.0",
+    "lodash": "^4.17.19",
+    "postcss": "^8.1.14",
+    "vite": "^3.0.0"
+  },
+  "name": "ecoqr",
+  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\" alt=\"Laravel Logo\"></a></p>",
+  "version": "1.0.0",
+  "main": "vite.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "asynckit": "^0.4.0",
+    "combined-stream": "^1.0.8",
+    "delayed-stream": "^1.0.0",
+    "esbuild": "^0.15.7",
+    "esbuild-linux-64": "^0.15.7",
+    "follow-redirects": "^1.15.2",
+    "form-data": "^4.0.0",
+    "function-bind": "^1.1.1",
+    "has": "^1.0.3",
+    "is-core-module": "^2.10.0",
+    "mime-db": "^1.52.0",
+    "mime-types": "^2.1.35",
+    "nanoid": "^3.3.4",
+    "path-parse": "^1.0.7",
+    "picocolors": "^1.0.0",
+    "picomatch": "^2.3.1",
+    "resolve": "^1.22.1",
+    "rollup": "^2.78.1",
+    "source-map-js": "^1.0.2",
+    "supports-preserve-symlinks-flag": "^1.0.0",
+    "vite-plugin-full-reload": "^1.0.4"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
