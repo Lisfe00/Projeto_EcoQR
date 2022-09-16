@@ -17,7 +17,7 @@ use App\Http\Controllers\EcoQRController;
 
 Route::get('/', [EcoQRController::class, 'index']);
 
-Route::get('/login', [EcoQRController::class, 'login']);
+Route::post('/login', [EcoQRController::class, 'login']);
 
 Route::get('/cadastro_fornecedor', [EcoQRController::class, 'cadastro_fornecedor']);
 

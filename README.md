@@ -18,9 +18,14 @@ Instalar pré-requisitos:
 * [Docker](https://docs.docker.com/engine/installation/linux/ubuntulinux/)
 * [docker-compose](https://docs.docker.com/compose/install/)
 
-Para levantar o container, basta executar:
+Para levantar o container pela primeira vez, basta executar:
 ```sh
-$ ./vendor/bin/sail
+$ ./vendor/bin/sail up
+```
+
+Após isso, nas próximas basta usar:
+```sh
+$ docker-compose up
 ```
 
 Caso necessário, você pode acessar os containers via SSH:
