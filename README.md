@@ -2,7 +2,7 @@
 
 * Feito com [Laravel](http://laravel.com)
 * Encode: UTF-8
-* Docker: http://172.17.0.1:8092
+* Docker: http://172.17.0.1:8012
 
 ## Laravel
 
