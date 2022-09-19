@@ -18,18 +18,19 @@
 
     <main>
         
-        <form action="/" method="GET">
+        <form method="post" action="{{ route('show.login.do') }}">
+            @csrf
             <div class="card">
                 <div class="card-group-img">
                     <img src="{{asset(mix('assets/images/login.png'))}}" width="150">
                 </div>
                 <div class="card-group">
                     <label>Login</label>
-                    <input type="text" name="login" >
+                    <input type="text" name="email_user" required>
                 </div>
                 <div class="card-group">
                         <label>Senha</label>
-                            <input type="password" name="senha" id="senha">
+                            <input type="password" name="password" id="senha" required>
                             <div class="card-group-senha">
                             <img id="img_cadeado_aberto" onclick="mostrar_senha()" src="{{asset(mix('assets/images/cadeado_aberto.png'))}}" width="40">
                             <img id="img_cadeado_fechado" onclick="mostrar_senha()" src="{{asset(mix('assets/images/cadeado_fechado.png'))}}" width="40">

@@ -35,7 +35,7 @@ $ docker-compose exec mysql bash
 ```
 Liberar as permissoes do container:
 ```sh
-$ docker-compose run web chmod 0777 -R
+$ chmod 0777 -R storage/
 ```
 
 Migrate:

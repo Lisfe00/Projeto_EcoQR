@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\EcoQRController;
+use App\Http\Controllers\AuthController;
 
-Route::get('/', [EcoQRController::class, 'index']);
 
-Route::post('/login', [EcoQRController::class, 'login']);
+Route::get('/show', [AuthController::class, 'dashboard'])->name('show');
 
-Route::get('/cadastro_fornecedor', [EcoQRController::class, 'cadastro_fornecedor']);
+Route::get('/show/login', [AuthController::class, 'show_login'])->name('show.login');
+
+Route::post('/show/login/do', [AuthController::class, 'login'])->name('show.login.do');
+
 

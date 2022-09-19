@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('fornecedor', function (Blueprint $table) {
+        Schema::create('fornecedors', function (Blueprint $table) {
             $table->id('id_fornecedor');
             $table->string('nome_fornecedor');
             $table->string('cpf/cnpj_fornecedor');
