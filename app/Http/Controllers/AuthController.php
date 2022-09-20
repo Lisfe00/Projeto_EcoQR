@@ -34,13 +34,10 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        var_dump($request->all());
-
-        $credentials = [
-            'email_user' => $request->email_user,
-            'password' => $request->password 
-        ];
-
-        Auth::attempt($credentials);
+        if (Auth::attempt(['email' => $request->email_user, 'password' => $request->password])) {
+            dd('você está logado');
+        }else{
+            dd('não logou');
+        }
     }
 }
