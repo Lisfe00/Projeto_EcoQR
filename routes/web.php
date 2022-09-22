@@ -24,3 +24,9 @@ Route::get('/show/login', [AuthController::class, 'show_login'])->name('show.log
 Route::get('/show/logout', [AuthController::class, 'logout'])->name('show.logout');
 
 Route::post('/show/login/do', [AuthController::class, 'login'])->name('show.login.do');
+
+Route::get('/show/cadastro_fornecedor', [EcoQRController::class, 'show_cadastro_fornecedor'])->name('show.cadastro.fornecedor');
+
+Route::post('/show/cadastro_fornecedor/do', [EcoQRController::class, 'cadastro_fornecedor_do'])->name('cadastro.fornecedor.do');
+
+Route::get('/show/show_fornecedors', [EcoQRController::class, 'show_fornecedors'])->name('show.fornecedors');

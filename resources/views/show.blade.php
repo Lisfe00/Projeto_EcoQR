@@ -15,7 +15,7 @@
           <div class="line3"></div>
         </div>
         <ul class="nav-list">
-          <li><a href="cadastro_fornecedor"><img src="{{asset(mix('assets/images/cadastroN.png'))}}" width="20" height="20" /> Fornecedor</a></li>
+          <li><a href="{{route('show.fornecedors')}}"><img src="{{asset(mix('assets/images/cadastroN.png'))}}" width="20" height="20" /> Fornecedor</a></li>
           <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/cliente.png'))}}" width="20" height="20" /> Cliente</a></li>
           <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/org2.png'))}}" width="20" height="20" /> Produto</a></li>
           <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/venda1.png'))}}" width="20" height="20" /> Venda</a></li>
@@ -29,7 +29,7 @@
 
   <main>
         
-          <a href="cadastro_fornecedor"><button formaction='cadastro.html' class="btnimg"><img src="{{asset(mix('assets/images/cadastroN.png'))}}" />FORNECEDOR</button></a>
+          <a href="{{ route('show.cadastro.fornecedor') }}"><button formaction='cadastro.html' class="btnimg"><img src="{{asset(mix('assets/images/cadastroN.png'))}}" />FORNECEDOR</button></a>
         
           <a href="cadastro_cliente.html"><button class="btnimg"><img src="{{asset(mix('assets/images/cliente.png'))}}" />CLIENTE</button></a>
         

@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('fornecedors', function (Blueprint $table) {
             $table->id('id_fornecedor');
             $table->string('nome_fornecedor');
-            $table->string('cpf/cnpj_fornecedor');
+            $table->string('cpf_cnpj_fornecedor');
             $table->string('fone_fornecedor');
             $table->string('email_fornecedor');
             $table->string('cep_fornecedor');

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style_cadastro_fornecedor.css">
+  <link rel="stylesheet" href={{asset('css/style_cadastro_fornecedor.css') }}> 
   <title>EcoQR</title>
 </head>
 <body>
@@ -16,7 +16,7 @@
               <div class="line3"></div>
             </div>
             <ul class="nav-list">
-              <li><a href="cadastro_fornecedor"><img src="{{asset(mix('assets/images/cadastroN.png'))}}" width="20" height="20" /> Fornecedor</a></li>
+              <li><a href="{{route('show.fornecedors')}}"><img src="{{asset(mix('assets/images/cadastroN.png'))}}" width="20" height="20" /> Fornecedor</a></li>
               <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/cliente.png'))}}" width="20" height="20" /> Cliente</a></li>
               <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/org2.png'))}}" width="20" height="20" /> Produto</a></li>
               <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/venda1.png'))}}" width="20" height="20" /> Venda</a></li>
@@ -27,13 +27,14 @@
             </div>
             <a class="logout" href="login"><img src="{{asset(mix('assets/images/logout.png'))}}" width="30" height="30" /></a>
     </header>
-    
 
     <main>
-        <form class="form" method="POST" action="#">
+
+        <form class="form" method="POST" action="{{route('cadastro.fornecedor.do')}}">
+            @csrf
             <div class="card">
         
-                    <h2 class="title">CADASTRO</h2>
+                    <h2 class="title">CADASTRO FORNECEDOR</h2>
 
                 <div class="card-group">
                     <label>Nome</label>
@@ -42,7 +43,7 @@
 
                 <div class="card-group">
                     <label>CPF/CNPJ</label>
-                    <input id="cpf_cnpj" type="text" name="CPF/CNPJf" placeholder="XX. XXX. XXX/0001-XX" onblur="mascara_cpf_cnpj()" maxlength="14"  required>
+                    <input id="cpf_cnpj" type="text" name="CPF_CNPJf" placeholder="XX. XXX. XXX/0001-XX" onblur="mascara_cpf_cnpj()" maxlength="14"  required>
                 </div>
 
                 <div class="group_elements">
@@ -75,7 +76,7 @@
 
                 <div id="outros">
                     <label>Outro</label>
-                    <input type="text" name="estado" placeholder="Digite o Estado" required>
+                    <input type="text" name="outro_estado" placeholder="Digite o Estado">
                 </div>
 
                 <div class="group_elements">
@@ -102,13 +103,17 @@
 
                     <div class="botao">
                         <button type="submit">CADASTRAR</button>
-                        <a class="botao_a" href="/">VOLTAR</a>
+                        <a class="botao_a" href="{{route('show')}}">VOLTAR</a>
                     </div>
 
             </div>
         </form>
-    </main>
 
+                @if (session('msg'))
+                    <script type="text/javascript">alert('{{ session('msg')}}')</script>
+                @endif
+
+    </main>
 
     <script src="{{asset(mix('assets/js/scripts.js'))}}"></script>
  

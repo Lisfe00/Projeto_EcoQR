@@ -18,18 +18,12 @@ class AuthController extends Controller
     
     public function dashboard()
     {  
-        if(Auth::check() == true)
+        if(Auth::check() == null)
         {
-            dd(Auth::check());
             return view('show');
         }
 
         return redirect()->route('show.login');
-    }
-
-    public function show_login()
-    {
-        return view('login');
     }
 
     public function login(Request $request)
@@ -41,14 +35,21 @@ class AuthController extends Controller
 
         if(Auth::attempt($credentials)){
             return redirect()->route('show');
+        }else{
+              dd(Auth::attempt($credentials));
         }
 
+    }
+
+    public function show_login()
+    {
+        return view('login');
     }
 
     public function logout()
     {
     Auth::logout();
 
-    return redirect()->route('show');
+    return redirect()->route('show.login');
     }
 }
