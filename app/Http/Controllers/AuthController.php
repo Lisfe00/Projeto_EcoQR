@@ -9,18 +9,18 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-
      /**
      * Handle an authentication attempt.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
+    
     public function dashboard()
-    {
-        if(Auth::check() === true)
+    {  
+        if(Auth::check() == true)
         {
+            dd(Auth::check());
             return view('show');
         }
 
@@ -34,10 +34,21 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        if (Auth::attempt(['email' => $request->email_user, 'password' => $request->password])) {
-            dd('você está logado');
-        }else{
-            dd('não logou');
+        $credentials = [
+            'email' => $request->email_user,
+            'password' => $request->password 
+        ];
+
+        if(Auth::attempt($credentials)){
+            return redirect()->route('show');
         }
+
+    }
+
+    public function logout()
+    {
+    Auth::logout();
+
+    return redirect()->route('show');
     }
 }

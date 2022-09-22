@@ -16,7 +16,6 @@ class InsertUsersTable extends Migration
         User::create([
             'email' => ('admin@gmail.com'),
             'password' => Bcrypt('123456'),
-            'remember_token' => ('null')
         ]);
     }
 

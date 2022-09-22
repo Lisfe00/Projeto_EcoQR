@@ -24,7 +24,7 @@
             <a href="/"> <img src="{{asset(mix('assets/images/qrcode.png'))}}" width="40" height="40" /> </a>
             <a href="/"> EcoQR </a>
         </div>
-        <a class="logout" href="login"><img src="{{asset(mix('assets/images/logout.png'))}}" width="30" height="30" /></a>
+        <a class="logout" href="{{ route('show.logout') }}"><img src="{{asset(mix('assets/images/logout.png'))}}" width="30" height="30" /></a>
 </header>
 
   <main>

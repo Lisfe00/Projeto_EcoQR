@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EcoQRController;
 use App\Http\Controllers\AuthController;
 
-
 Route::get('/show', [AuthController::class, 'dashboard'])->name('show');
 
 Route::get('/show/login', [AuthController::class, 'show_login'])->name('show.login');
 
+Route::get('/show/logout', [AuthController::class, 'logout'])->name('show.logout');
+
 Route::post('/show/login/do', [AuthController::class, 'login'])->name('show.login.do');
-
-
