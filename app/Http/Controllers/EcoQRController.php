@@ -37,6 +37,8 @@ class EcoQRController extends Controller
 
     public function show_fornecedors()
     {
-        return view('shows.show_fornecedors');
+        $fornecedors = Fornecedor::all();
+
+        return view('shows.show_fornecedors',['fornecedors' => $fornecedors]);
     }
 }

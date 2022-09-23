@@ -22,8 +22,8 @@
               <li><a href="cadastro.html"><img src="{{asset(mix('assets/images/venda1.png'))}}" width="20" height="20" /> Venda</a></li>
             </ul>
             <div class="logo_header">
-                <a href="/"> <img src="{{asset(mix('assets/images/qrcode.png'))}}" width="40" height="40" /> </a>
-                <a href="/"> EcoQR </a>
+                <a href="{{route('show')}}"> <img src="{{asset(mix('assets/images/qrcode.png'))}}" width="40" height="40" /> </a>
+                <a href="{{route('show')}}"> EcoQR </a>
             </div>
             <a class="logout" href="login"><img src="{{asset(mix('assets/images/logout.png'))}}" width="30" height="30" /></a>
     </header>
