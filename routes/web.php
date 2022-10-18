@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\EcoQRController;
 use App\Http\Controllers\AuthController;
 
+Route::middleware(['auth'])->group(function (){
+
 Route::get('/show', [AuthController::class, 'dashboard'])->name('show');
 
 Route::get('/show/login', [AuthController::class, 'show_login'])->name('show.login');
@@ -30,3 +32,8 @@ Route::get('/show/cadastro_fornecedor', [EcoQRController::class, 'show_cadastro_
 Route::post('/show/cadastro_fornecedor/do', [EcoQRController::class, 'cadastro_fornecedor_do'])->name('cadastro.fornecedor.do');
 
 Route::get('/show/show_fornecedors', [EcoQRController::class, 'show_fornecedors'])->name('show.fornecedors');
+
+
+});
+
+require __DIR__.'/auth.php';
