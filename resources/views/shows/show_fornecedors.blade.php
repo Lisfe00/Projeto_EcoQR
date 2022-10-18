@@ -36,6 +36,8 @@
                 <th>NOME</th>
                 <th>CPF/CNPJ</th>
                 <th>TELEFONE</th>
+                
+
                 <th>EMAIL</th>
                 <th>CEP</th>
                 <th>ESTADO</th>
