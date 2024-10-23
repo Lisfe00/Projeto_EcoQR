@@ -12,6 +12,11 @@ Copie o .env
 $ cp .env.example .env
 ```
 
+## Composer
+
+Instalar pré-requisitos:
+* [Composer](https://getcomposer.org/download/)
+
 ## Docker
 
 Instalar pré-requisitos:
@@ -36,6 +41,7 @@ $ docker-compose exec mysql bash
 Liberar as permissoes do container:
 ```sh
 $ chmod 0777 -R storage/
+$ chmod 0777 -R bootstrap/
 ```
 
 Migrate:
